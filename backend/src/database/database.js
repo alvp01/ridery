@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-const rideryDB = mongoose.connect('mongodb://localhost:27017/ridery');
+dotenv.config();
+
+const rideryDB = mongoose.connect(process.env.DB_URI);
 
 export default rideryDB;
