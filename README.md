@@ -115,3 +115,4 @@ Navegar hacia la dirección `http://localhost:5173/login`
 #### Consideraciones:
 
 - En caso de encontrar problemas instalando MongoDB, puedes visitar [su página oficial](https://www.mongodb.com/docs/manual/installation/)
+- Aquí hay un pequeño video de [cómo funciona la app](https://www.loom.com/share/b2ca91e13d1d40408159cb61506074a6?sid=a2262acf-d893-4cce-acfd-1f0d80115644)
