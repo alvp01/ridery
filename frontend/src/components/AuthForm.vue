@@ -1,18 +1,27 @@
 <template>
-  <sessions-layout>
-    <v-form v-model="valid" ref="form">
-      <v-text-field v-model="email" label="Email" :rules="emailRules"></v-text-field>
-      <v-text-field v-model="password" type="password" label="Password" :rules="passwordRules"></v-text-field>
-      <v-btn :disabled="!valid" @click="handleSubmit">{{ buttonText }}</v-btn>
-    </v-form>
-    <v-btn text @click="navigateToRedirect">{{ redirectText }}</v-btn>
-  </sessions-layout>
+  <general-layout>
+    <v-container>
+      <v-row class="d-flex justify-center align-center">
+        <v-col cols="12" class="d-flex justify-center align-center">
+          <v-form v-model="valid" ref="form" class="auth-form px-8 py-4 d-flex justify-center align-center">
+            <div>
+              <v-text-field v-model="email" label="Email" :rules="emailRules"></v-text-field>
+              <v-text-field v-model="password" type="password" label="Password" :rules="passwordRules"></v-text-field>
+              <v-btn :disabled="!valid" @click="handleSubmit" class="mr-2">{{ buttonText }}</v-btn>
+              <v-btn text @click="navigateToRedirect">{{ redirectText }}</v-btn>
+            </div>
+          </v-form>
+        </v-col>
+      </v-row>
+    </v-container>
+
+  </general-layout>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import SessionsLayout from '../layouts/SessionsLayout.vue'
+import GeneralLayout from '../layouts/GeneralLayout.vue'
 import { emailRules, passwordRules } from '../utils/sessionValidation'
 import { sessionServices } from '../services/sessionServices'
 
@@ -64,3 +73,15 @@ const navigateToRedirect = () => {
   router.push(props.redirectLink)
 }
 </script>
+
+<style>
+.auth-form {
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 350px !important;
+}
+
+.auth-form div {
+  width: 100%;
+}
+</style>

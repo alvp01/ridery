@@ -2,10 +2,13 @@ import Vehicle from '../models/Vehicle.js';
 
 const getAllVehicles = async (options, filters) => {
   const { page, limit, sort } = options;
-  return await Vehicle.find(filters)
+  const totalVehicles = await Vehicle.countDocuments(filters);
+  const vehicles = await Vehicle.find(filters)
     .sort(sort)
     .skip((page - 1) * limit)
     .limit(limit);
+  const totalPages = Math.ceil(totalVehicles / limit);
+  return { vehicles, totalPages };
 };
 
 const getVehicleById = async (id) => {

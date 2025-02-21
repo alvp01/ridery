@@ -1,7 +1,7 @@
 <template>
-  <v-container class="d-flex justify-center align-center">
-    <v-row>
-      <v-col cols="12" md="6">
+  <v-container class="d-flex justify-center align-center" id="general-layout">
+    <v-row class="d-flex justify-center w-100">
+      <v-col class="d-flex justify-center align-center w-100">
         <slot></slot>
       </v-col>
     </v-row>

@@ -5,7 +5,7 @@ export const getAllVehicles = async (req, res) => {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 20;
     const sortBy = req.query.sortBy || 'created_at';
-    const order = req.query.order === 'desc' ? -1 : 1;
+    const order = req.query.order === 'asc' ? 1 : -1;
 
     const options = {
       page,
