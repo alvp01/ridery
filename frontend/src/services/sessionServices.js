@@ -1,4 +1,3 @@
-// src/services/sessionServices.js
 import rideryTestClient from '../api/rideryTestClient';
 
 const logIn = async (body) => {

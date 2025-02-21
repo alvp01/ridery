@@ -1,4 +1,3 @@
-<!-- src/pages/Inventory.vue -->
 <template>
   <inventory-container />
 </template>

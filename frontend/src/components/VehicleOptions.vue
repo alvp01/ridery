@@ -1,4 +1,3 @@
-<!-- src/components/VehicleOptions.vue -->
 <template>
   <v-container id="vehicle-options" class="vehicle-options d-flex justify-center align-center">
     <v-row class="w-100">

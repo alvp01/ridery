@@ -1,4 +1,3 @@
-// src/services/vehicleServices.js
 import rideryTestClient from '../api/rideryTestClient';
 
 const getAllTheVehicles = async (params) => {
@@ -17,7 +16,13 @@ const addVehicle = async (vehicleData) => {
   return response;
 };
 
+const updateVehicle = async (vehicleId, newStatus) => {
+  const response = await rideryTestClient.put(`/api/v1/vehicles/${vehicleId}`, { status: newStatus });
+  return response;
+};
+
 export const vehicleServices = {
   getAllTheVehicles,
   addVehicle,
+  updateVehicle,
 };

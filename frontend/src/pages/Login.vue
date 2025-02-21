@@ -1,4 +1,3 @@
-<!-- src/pages/Login.vue -->
 <template>
   <auth-form endpoint="/login" redirectPath="/inventory" buttonText="Log In" redirectText="Don't have an account?"
     redirectLink="/signup" />
