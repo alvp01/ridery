@@ -106,8 +106,7 @@ const addCar = async () => {
 }
 
 .add-car-form {
-  opacity: 0.9 !important;
-  /* Adjust the opacity as needed */
+  opacity: 0.9;
 }
 
 .w-45 {
