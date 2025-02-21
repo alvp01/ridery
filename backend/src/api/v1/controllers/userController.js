@@ -25,8 +25,13 @@ export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
     const token = await loginUser({ email, password });
-    res.json({ token });
+    res.json({ jwt: token, message: 'Login successful' });
   } catch (error) {
     res.status(401).json({ message: error.message });
   }
+};
+
+export const logout = (req, res) => {
+  res.clearCookie('jwt');
+  res.json({ message: 'Logout successful' });
 };

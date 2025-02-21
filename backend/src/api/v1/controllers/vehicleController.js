@@ -27,8 +27,8 @@ export const getAllVehicles = async (req, res) => {
       filters.status = req.query.status;
     }
 
-    const vehicles = await vehicleService.getAllVehicles(options, filters);
-    res.json(vehicles);
+    const { vehicles, totalPages } = await vehicleService.getAllVehicles(options, filters);
+    res.json({ vehicles, totalPages });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

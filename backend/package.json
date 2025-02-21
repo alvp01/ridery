@@ -5,7 +5,6 @@
   "description": "initial version of backend for ridery test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./src/app.js",
     "db:seed": "node ./src/database/resetAndSeedDB.js"
   },
@@ -13,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-validator": "^7.2.1",
